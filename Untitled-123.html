@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Bonitas y Poemas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #e74c3c;
+        }
+
+        .content {
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        button {
+            padding: 15px 25px;
+            background-color: #e74c3c;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Querida Brianna estas frases te las dedica el Fer</h1>
+        <div class="content" id="poemaContainer">
+            <!-- Aquí aparecerá la frase o poema -->
+            "La belleza de tu alma se refleja en cada paso que das."
+        </div>
+        <button onclick="mostrarPoema()">Mostrar Poema o Frase</button>
+        <div class="footer">
+            <p>Porque el amor no tiene fronteras, solo emociones que conectan corazones.</p>
+        </div>
+    </div>
+
+    <script>
+        const poemas = [
+            "En tus ojos encuentro el reflejo de un universo lleno de paz y amor.",
+            "A veces, las palabras sobran, porque tu sonrisa lo dice todo.",
+            "El viento susurra tu nombre y el corazón late más rápido.",
+            "Eres la melodía que mi alma siempre había esperado.",
+            "Tu risa es mi lugar favorito, y tu mirada mi mejor refugio.",
+            "Es un suspiro en el aire, un deseo hecho realidad, un amor eterno.",
+            "Si los sueños fueran estrellas, tú serías mi constelación favorita.",
+            "No necesito la luna, porque tú iluminas mis noches con tu esencia."
+        ];
+
+        function mostrarPoema() {
+            const poemaAleatorio = poemas[Math.floor(Math.random() * poemas.length)];
+            document.getElementById("poemaContainer").textContent = poemaAleatorio;
+        }
+    </script>
+
+</body>
+</html>
